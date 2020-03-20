@@ -1,6 +1,6 @@
 // Click button generates randomized password
 
-// document.getElementById("button").onclick.generatePasswordCharacters();
+document.getElementById("button").onclick = function() {generatePasswordCharacters()};
 
 // Presented with a series of prompts for password criteria & user selects what criteria to include in the password
 
@@ -116,6 +116,7 @@ function randomLowerCase() {
     // console.log(charactersAll.lowerCase[randomLowerCaseIndex]);
     var randomLowerCase = (charactersAll.lowerCase[randomLowerCaseIndex]);
     generatedPasswordCharacters.push(randomLowerCase)
+    console.log("generatedPasswordCharacters" + generatedPasswordCharacters)
 }
 
 // randomLowerCase()
@@ -131,6 +132,7 @@ function randomUpperCase() {
     // console.log(charactersAll.upperCase[randomUpperCaseIndex]);
     var randomUpperCase = (charactersAll.upperCase[randomUpperCaseIndex]);
     generatedPasswordCharacters.push(randomUpperCase)
+    console.log("generatedPasswordCharacters" + generatedPasswordCharacters)
 }
 
 // randomUpperCase()
@@ -146,6 +148,7 @@ function randomNumericCase() {
     // console.log(charactersAll.numericCase[randomNumericCaseIndex]);
     var randomNumericCase = (charactersAll.numericCase[randomNumericCaseIndex]);
     generatedPasswordCharacters.push(randomNumericCase)
+    console.log("generatedPasswordCharacters" + generatedPasswordCharacters)
 }
 
 // randomNumericCase()
@@ -161,6 +164,7 @@ function randomSpecialCase() {
     // console.log(charactersAll.specialCase[randomSpecialCaseIndex]);
     var randomSpecialCase = (charactersAll.specialCase[randomSpecialCaseIndex]);
     generatedPasswordCharacters.push(randomSpecialCase)
+    console.log("generatedPasswordCharacters" + generatedPasswordCharacters)
 }
 
 // randomSpecialCase()
@@ -174,30 +178,30 @@ function randomSpecialCase() {
 // For Loops functions of password length & character types
 
 function generatePasswordCharacters() {
-    while (8 <= passwordLengthInteger) {
+    while (generatedPassword.length <= passwordLengthInteger) {
         if (lowerCaseCharacters === true) {
             randomLowerCase();
         }
 
-        else if {null}
+        else {null};
 
         if (upperCaseCharacters === true) {
             randomUpperCase();
-        };
+        }
 
-        else if {null}
+        else {null};
 
         if (numericCharacters === true) {
             randomNumericCase();
-        };
+        }
 
-        else if {null}
+        else {null};
 
         if (specialCharacters === true) {
             randomSpecialCase();
-        };
+        }
 
-        else if {null}
+        else {null};
         
         generatedPassword = generatedPasswordCharacters.join("")
     }
