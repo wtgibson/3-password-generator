@@ -115,7 +115,8 @@ function randomLowerCase() {
     var randomLowerCaseIndex = Math.floor(Math.random() * charactersAll.lowerCase.length);
     // console.log(charactersAll.lowerCase[randomLowerCaseIndex]);
     var randomLowerCase = (charactersAll.lowerCase[randomLowerCaseIndex]);
-    generatedPasswordCharacters.push(randomLowerCase)
+    // generatedPasswordCharacters.push(randomLowerCase)
+    generatedPassword += randomLowerCase
     console.log("generatedPasswordCharacters" + generatedPasswordCharacters)
 }
 
@@ -131,7 +132,8 @@ function randomUpperCase() {
     var randomUpperCaseIndex = Math.floor(Math.random() * charactersAll.upperCase.length);
     // console.log(charactersAll.upperCase[randomUpperCaseIndex]);
     var randomUpperCase = (charactersAll.upperCase[randomUpperCaseIndex]);
-    generatedPasswordCharacters.push(randomUpperCase)
+    // generatedPasswordCharacters.push(randomUpperCase)
+    generatedPassword += randomUpperCase
     console.log("generatedPasswordCharacters" + generatedPasswordCharacters)
 }
 
@@ -147,7 +149,8 @@ function randomNumericCase() {
     var randomNumericCaseIndex = Math.floor(Math.random() * charactersAll.numericCase.length);
     // console.log(charactersAll.numericCase[randomNumericCaseIndex]);
     var randomNumericCase = (charactersAll.numericCase[randomNumericCaseIndex]);
-    generatedPasswordCharacters.push(randomNumericCase)
+    // generatedPasswordCharacters.push(randomNumericCase)
+    generatedPassword += randomNumericCase
     console.log("generatedPasswordCharacters" + generatedPasswordCharacters)
 }
 
@@ -163,7 +166,8 @@ function randomSpecialCase() {
     var randomSpecialCaseIndex = Math.floor(Math.random() * charactersAll.specialCase.length);
     // console.log(charactersAll.specialCase[randomSpecialCaseIndex]);
     var randomSpecialCase = (charactersAll.specialCase[randomSpecialCaseIndex]);
-    generatedPasswordCharacters.push(randomSpecialCase)
+    // generatedPasswordCharacters.push(randomSpecialCase)
+    generatedPassword += randomSpecialCase
     console.log("generatedPasswordCharacters" + generatedPasswordCharacters)
 }
 
@@ -178,32 +182,58 @@ function randomSpecialCase() {
 // For Loops functions of password length & character types
 
 function generatePasswordCharacters() {
-    while (generatedPassword.length <= passwordLengthInteger) {
-        if (lowerCaseCharacters === true) {
+    
+    console.log(generatedPassword.length)
+
+    console.log(passwordLengthInteger)
+
+    while (generatedPassword.length < passwordLengthInteger) {
+        
+        console.log(generatedPassword.length)
+
+        console.log(passwordLengthInteger)
+        
+        if (lowerCaseCharacters === true && generatedPassword.length < passwordLengthInteger) {
             randomLowerCase();
+
+            console.log("generatedPassword.length = " + generatedPassword.length)
+
+            console.log("passwordLengthInteger = " + passwordLengthInteger)
         }
 
         else {null};
 
-        if (upperCaseCharacters === true) {
+        if (upperCaseCharacters === true && generatedPassword.length < passwordLengthInteger) {
             randomUpperCase();
+            
+            console.log("generatedPassword.length = " + generatedPassword.length)
+
+            console.log("passwordLengthInteger = " + passwordLengthInteger)
         }
 
         else {null};
 
-        if (numericCharacters === true) {
+        if (numericCharacters === true && generatedPassword.length < passwordLengthInteger) {
             randomNumericCase();
+
+            console.log("generatedPassword.length = " + generatedPassword.length)
+
+            console.log("passwordLengthInteger = " + passwordLengthInteger)
         }
 
         else {null};
 
-        if (specialCharacters === true) {
+        if (specialCharacters === true && generatedPassword.length < passwordLengthInteger) {
             randomSpecialCase();
+
+            console.log("generatedPassword.length = " + generatedPassword.length)
+
+            console.log("passwordLengthInteger = " + passwordLengthInteger)
         }
 
         else {null};
         
-        generatedPassword = generatedPasswordCharacters.join("")
+        // generatedPassword = generatedPasswordCharacters.join("")
     }
 
     alert(generatedPassword)
@@ -215,7 +245,7 @@ console.log("passwordLengthInteger = " + passwordLengthInteger)
 
 console.log("generatedPasswordCharacters = " + generatedPasswordCharacters)
 
-generatedPassword = generatedPasswordCharacters.join("")
+// generatedPassword = generatedPasswordCharacters.join("")
 
 console.log("generatedPassword = " + generatedPassword)
 
