@@ -43,36 +43,65 @@ THEN the password is either displayed in an alert or written to the page
 
 ## Code Snippet
 
-Below is an example of a block of code in the HTML file where I leveraged the Bootstrap and the Grid system to create, style, and place a responsive card with an image and text inside on the web page.
+Below is an example of a block of code in the JS file where I created a function leveraging the While loop to determine how many random digits of each kind should be included in the generated password. It includes nested If/Else statements evaluating whether each set of characters value were set to True by the user as well as keep track of the current digit count of the generated password ceasing to add digits when it gets to the number the user chose for the length in the first prompt.
 
-```html
-<div class="container-responsive border bg-light py-5 m-0">
-    <div class="row">
-      <div class="card bg-white py-4 col-lg-9 col-md-10 col-sm-10 ml-5">
-        <div class="h1 text-info">About Me
-          <hr>
-        </div>
-        <div class="card-body">
-          <div class="row">
-            <img class="col-md-6 col-xs-12 py-2 card-img-top img-responsive"
-              src="https://media-exp1.licdn.com/dms/image/C5603AQHK-_3mwh2xEQ/profile-displayphoto-shrink_200_200/0?e=1590019200&v=beta&t=JlwObXlYCOBQY-927XEvpJ9wJ2F1QOlarYh8RRSq78Y"
-              alt="Card image cap">
-            <p class="col-md-6 col-xs-12 py-2 card-text text-dark">
-              My name is Will Gibson and I'm originally from a town called Danville. After graduating from USC I spent
-              2.5 years as a financial analyst for Apple until recently when I decided to learn to code!
-            </p>
-            <div class="row py-4">
-              <p class="col-md-12 col-xs-12 py-2 card-text text-dark">
-                After the class is over I hope to use my skills to get a role in Product Management so I can be closer
-                to the development of technology!
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-"> </div>
-    </div>
-</div>
+```js
+function generatePasswordCharacters() {
+    
+    console.log(generatedPassword.length)
+
+    console.log(passwordLengthInteger)
+
+    while (generatedPassword.length < passwordLengthInteger) {
+        
+        console.log(generatedPassword.length)
+
+        console.log(passwordLengthInteger)
+        
+        if (lowerCaseCharacters === true && generatedPassword.length < passwordLengthInteger) {
+            randomLowerCase();
+
+            console.log("generatedPassword.length = " + generatedPassword.length)
+
+            console.log("passwordLengthInteger = " + passwordLengthInteger)
+        }
+
+        else {null};
+
+        if (upperCaseCharacters === true && generatedPassword.length < passwordLengthInteger) {
+            randomUpperCase();
+            
+            console.log("generatedPassword.length = " + generatedPassword.length)
+
+            console.log("passwordLengthInteger = " + passwordLengthInteger)
+        }
+
+        else {null};
+
+        if (numericCharacters === true && generatedPassword.length < passwordLengthInteger) {
+            randomNumericCase();
+
+            console.log("generatedPassword.length = " + generatedPassword.length)
+
+            console.log("passwordLengthInteger = " + passwordLengthInteger)
+        }
+
+        else {null};
+
+        if (specialCharacters === true && generatedPassword.length < passwordLengthInteger) {
+            randomSpecialCase();
+
+            console.log("generatedPassword.length = " + generatedPassword.length)
+
+            console.log("passwordLengthInteger = " + passwordLengthInteger)
+        }
+
+        else {null};
+        
+    }
+
+    alert(generatedPassword)
+}
 ```
 
 ## Author Links
