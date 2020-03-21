@@ -31,7 +31,7 @@ THEN the password is either displayed in an alert or written to the page
 ```
 
 ## Site Picture
-![Site](/password-generator-example.png)
+![Site](password-generator.png)
 
 ## Technologies Used
 - HTML - used to create elements on the DOM

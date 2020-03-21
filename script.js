@@ -237,6 +237,10 @@ function generatePasswordCharacters() {
     }
 
     alert(generatedPassword)
+
+    var password = document.querySelector("#password")
+
+    password.textContent(generatedPassword)
 }
 
 generatePasswordCharacters()
